@@ -16,7 +16,7 @@ include("eligibleSolution.jl")
 fname = "/home/nicolas/Travail/Metaheuristique/DM1/SPP_DM/Data/didactic.dat"  # path for a standard config on macOS
 cost, matrix = loadSPP(fname)
 C, A = loadSPP(fname)
-
+println(eligibleSolution([0,0,0,0,0,0,0,0,0],A))
 #Greedy construction
 @time x, z = GreedyConstruction(C, A)
 @printf("z(xInit) = %d \n\n",z)
